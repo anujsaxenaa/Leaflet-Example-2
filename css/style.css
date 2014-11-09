@@ -1,0 +1,523 @@
+body {
+  padding: 0;
+  margin: 0;
+  height:100%;
+  font-family:sans-serif;
+}
+
+#map {
+  height: 100vh;
+  width: 60%;
+  float:left;
+}
+
+#sidebar {
+	width: 40%;
+	float:right;
+	background:#9b8c75;
+	height:100vh;
+	color: white;
+	padding:15px;
+	box-sizing: border-box;
+}
+
+#sidebar h1 {
+	margin-top:0;
+  font-size: 25px;
+}
+
+/*.museum {
+	background: #7FABC9;
+	padding: 14px;
+	border-radius: 12px;
+	margin-bottom: 10px;
+}*/
+
+.museum {
+  display: inline-table;
+  width: 110px;
+  height: 80px;
+  color: black;
+  background: #A15D18;
+  padding: 18px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.museum.hover {
+	background: #faebd7;
+}
+
+.museumName {
+	font-size: 17px;
+	font-weight: 500;
+  font-family: "sans-serif";
+	margin-bottom: 5px;
+}
+
+.museumDescription {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/*.museumName {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  margin: 1em;
+}*/
+
+/*#image {
+	height: 330px;
+	background-size: cover;
+  padding: 5px;
+  margin-top: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+*/
+#menu {
+	position: absolute;
+	right: 15px;
+	top: 30px;
+}
+
+#about:hover {
+	cursor:pointer;
+	color:rgb(191, 191, 191);;
+	text-decoration:underline;
+}
+
+#mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+	background:rgba(51, 51, 51, 0.87);
+  z-index: 10;
+  display:none;
+}
+
+.popup {
+  top: 10%;
+  width: 75%;
+  position: fixed;
+  left: 50%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 300px;
+  border-radius: 16px;
+  padding: 35px;
+  display:none;
+  color:#000;
+}
+
+.popup h2 {
+  font-size: 30px;
+  padding-bottom: 24px;
+  margin-top: 0;
+}
+
+.popup p {
+  line-height: 22px;
+  margin-bottom:10px;
+}
+
+.popup h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.popup .close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popup .close:hover {
+	cursor:pointer;
+	color: #E10000;
+}
+
+#imageMuseum {
+  height: 300px;
+  background-size: cover;
+  margin-top: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#imageMuseum1 {
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#imageMuseum2 {
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#imageMuseum3 {
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#imageMuseum4 {
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#imageMuseum5 {
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#imageMuseum6 {
+  height: 300px;
+  width: 500px;
+  background-size: cover;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+#aboutMetro:hover {
+  cursor:pointer;
+  color:rgb(191, 191, 191);;
+  text-decoration:underline;
+}
+
+#aboutAmerican:hover {
+  cursor:pointer;
+  color:rgb(191, 191, 191);;
+  text-decoration:underline;
+}
+
+#aboutModern:hover {
+  cursor:pointer;
+  color:rgb(191, 191, 191);;
+  text-decoration:underline;
+}
+
+#aboutBrooklyn:hover {
+  cursor:pointer;
+  color:rgb(191, 191, 191);;
+  text-decoration:underline;
+}
+
+#aboutMoving:hover {
+  cursor:pointer;
+  color:rgb(191, 191, 191);;
+  text-decoration:underline;
+}
+
+#aboutFrick:hover {
+  cursor:pointer;
+  color:rgb(191, 191, 191);;
+  text-decoration:underline;
+}
+
+/*For POPUP METRO*/
+
+.popupMetro {
+  top: 5%;
+  bottom: 6%;
+  width: 80%;
+  position: fixed;
+  left: 43%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 16px;
+  padding: 25px;
+  display:none;
+  color:#000;
+
+}
+
+.popupMetro h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.popupMetro p {
+  line-height: 22px;
+  margin-bottom:10px;
+  font-style: 2px;
+}
+
+/*.popupMetro h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}*/
+
+.popupMetro .closer {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popupMetro .closer:hover {
+  cursor:pointer;
+  color: #d9d7d7;
+}
+
+/*For POPUP American*/
+.popupAmerican {
+  top: 5%;
+  bottom: 6%;
+  width: 80%;
+  position: fixed;
+  left: 43%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 16px;
+  padding: 25px;
+  display:none;
+  color:#000;
+}
+
+.popupAmerican h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.popupAmerican p {
+  line-height: 22px;
+  margin-bottom:10px;
+}
+
+.popupAmerican h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.popupAmerican .closer {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popupAmerican .closer:hover {
+  cursor:pointer;
+  color: #d9d7d7;
+}
+
+/*For POPUP Modern*/
+.popupModern {
+  top: 5%;
+  bottom: 6%;
+  width: 80%;
+  position: fixed;
+  left: 43%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 16px;
+  padding: 25px;
+  display:none;
+  color:#000;
+}
+
+.popupModern h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.popupModern p {
+  line-height: 22px;
+  margin-bottom:10px;
+}
+
+.popupModern h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.popupModern .closer {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popupModern .closer:hover {
+  cursor:pointer;
+  color: #d9d7d7;
+}
+
+/*For POPUP Brooklyn*/
+
+.popupBrooklyn {
+  top: 5%;
+  bottom: 6%;
+  width: 80%;
+  position: fixed;
+  left: 43%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 16px;
+  padding: 25px;
+  display:none;
+  color:#000;
+}
+
+.popupBrooklyn h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.popupBrooklyn p {
+  line-height: 22px;
+  margin-bottom:10px;
+}
+
+.popupBrooklyn h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.popupBrooklyn .closer {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popupBrooklyn .closer:hover {
+  cursor:pointer;
+  color: #d9d7d7;
+}
+
+/*For POPUP Moving*/
+.popupMoving {
+  top: 5%;
+  bottom: 6%;
+  width: 80%;
+  position: fixed;
+  left: 43%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 16px;
+  padding: 25px;
+  display:none;
+  color:#000;}
+
+.popupMoving h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.popupMoving p {
+  line-height: 22px;
+  margin-bottom:10px;
+}
+
+.popupMoving h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.popupMoving .closer {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popupMoving .closer:hover {
+  cursor:pointer;
+  color: #d9d7d7;
+}
+
+/*For POPUP Frick*/
+.popupFrick {
+  top: 5%;
+  bottom: 6%;
+  width: 80%;
+  position: fixed;
+  left: 43%;
+  margin: 0 0 0 -37.5%;
+  z-index: 9999;
+  background: #fff;
+  min-height: 500px;
+  border-radius: 16px;
+  padding: 25px;
+  display:none;
+  color:#000;}
+
+.popupFrick h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.popupFrick p {
+  line-height: 22px;
+  margin-bottom:10px;
+}
+
+.popupFrick h3 {
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.popupFrick .closer {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 24px;
+}
+
+.popupFrick .closer:hover {
+  cursor:pointer;
+  color: #d9d7d7;
+}
+
