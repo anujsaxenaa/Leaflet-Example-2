@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Leaflet Testing</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<div id="map"></div> 
+	<div id="sidebar">
+		<!-- <div id = 'menu'><div id = 'about'><font color ="black" >About</font></div></div> -->
+		<h1><font color="black">Best Museums to visit in New York</font></h1>
+		<div class = 'museum metropolitan'>
+			<div class = 'museumName'>Metropolitan Museum of Art</div>
+			<div class = 'museumDescription'>
+				1000 5th Avenue
+			</div>
+			<div id = 'menuMetro'><div id = 'aboutMetro'><font size="1.7" color="black">More Info</font></div></div>
+		</div>
+
+		<div class = 'museum american'>
+			<div class = 'museumName'>American Museum of Natural History</div>
+			<div class = 'museumDescription'>
+				Upper West Side
+			</div>
+			<div id = 'menuAmerican'><div id = 'aboutAmerican'><font size="1.7" color="black">More Info</font></div></div>
+		</div>
+
+		<div class = 'museum modern'>
+			<div class = 'museumName'>Museum of Modern Art</div>
+			<div class = 'museumDescription'>
+				Midtown West
+			</div>
+			<div id = 'menuModern'><div id = 'aboutModern'><font size="1.7" color="black">More Info</font></div></div>
+		</div>
+
+		<div class = 'museum brooklyn'>
+			<div class = 'museumName'>Brooklyn Museum</div>
+			<div class = 'museumDescription'>
+				Prospect Heights
+			</div>
+			<div id = 'menuBrooklyn'><div id = 'aboutBrooklyn'><font size="1.7" color="black">More Info</font></div></div>
+		</div>
+
+		<div class = 'museum moving'>
+			<div class = 'museumName'>Museum of the Moving Image</div>
+			<div class = 'museumDescription'>
+				Astoria
+			</div>
+			<div id = 'menuMoving'><div id = 'aboutMoving'><font size="1.7" color="black">More Info</font></div></div>
+		</div>
+
+		<div class = 'museum frick'>
+			<div class = 'museumName'>Frick Collection</div>
+			<div class = 'museumDescription'>
+				Upper East Side
+			</div>
+			<div id = 'menuFrick'><div id = 'aboutFrick'><font size="1.7" color="black">More Info</font></div></div>
+		</div>
+		<br>
+
+<!-- JUST IMAGE -->
+		<!-- <div id = "image">
+			<div class = "popup privacy">
+				<div class = "close">&#10006;</div>
+				<h2>About this Site</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at justo ac orci pulvinar venenatis. Ut neque enim, cursus vitae euismod nec, scelerisque vitae purus. Vivamus auctor risus at feugiat finibus. Pellentesque sit amet eros non enim lacinia dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a venenatis enim. Curabitur et luctus turpis. Cras mattis augue purus, quis efficitur metus pretium sit amet.</p>
+
+				<p>Phasellus pellentesque suscipit sapien, dictum laoreet nunc sodales quis. Fusce viverra, augue eget ornare aliquet, neque massa rutrum est, et bibendum enim nunc in turpis. Vivamus ut mollis velit. Vestibulum rutrum nunc sed ipsum ultricies elementum. Nullam at justo magna. Morbi elit tortor, mattis at blandit quis, commodo sollicitudin lectus. Morbi efficitur nisi ac varius fermentum. Sed blandit orci ante, ut tempus nibh feugiat nec. Aliquam pharetra turpis in dui convallis tempus. Duis at ante enim. Pellentesque sed interdum risus.</p>
+
+			</div>
+			<div id='mask'></div>
+		</div> -->
+
+		<div id = "imageMuseum">
+			<div id='masked'></div>
+		</div>
+<!-- Creating Popup stuff for all museums -->
+
+		<div class = "popupMetro">
+			<div id = "imageMuseum1">
+				<div id='masked1'></div>
+			</div>
+			<div class = "closer">&#10005;</div>
+				<h2>Metropolitan Museum of Art</h2>
+				<p>The Metropolitan Museum of Art (colloquially The Met), located in New York City, is the largest art museum in the United States and one of the ten largest in the world.[6] Its permanent collection contains more than two million works, divided among seventeen curatorial departments. The main building, located on the eastern edge of Central Park along Manhattan's Museum Mile, is by area one of the world's largest art galleries. There is also a much smaller second location at "The Cloisters" in Upper Manhattan that features medieval art.</p>
+				<p>Represented in the permanent collection are works of art from classical antiquity and Ancient Egypt, paintings and sculptures from nearly all the European masters, and an extensive collection of American and modern art. The Met also maintains extensive holdings of African, Asian, Oceanic, Byzantine, and Islamic art. The museum is also home to encyclopedic collections of musical instruments, costumes and accessories, and antique weapons and armor from around the world. Several notable interiors, ranging from 1st-century Rome through modern American design, are permanently installed in the Met's galleries.</p> 
+		</div>
+
+		<div class = "popupAmerican">
+			<div id = "imageMuseum2">
+				<div id='masked2'></div>
+			</div>
+			<div class = "closer">&#10005;</div>
+				<h2>American Museum of Natural History</h2>
+				<p>The American Museum of Natural History (abbreviated as AMNH), located on the Upper West Side of Manhattan, New York City, is one of the largest and most celebrated museums in the world. Located in park-like grounds across the street from Central Park, the museum complex comprises 27 interconnected buildings housing 45 permanent exhibition halls, in addition to a planetarium and a library.</p> 
+				<p>The museum collections contain over 32 million specimens of plants, humans, animals, fossils, minerals, rocks, meteorites, and human cultural artifacts, of which only a small fraction can be displayed at any given time, and occupies 1,600,000 square feet (150,000 m2). The Museum has a full-time scientific staff of 225, sponsors over 120 special field expeditions each year, and averages about five million visits annually.</p>
+		</div>
+
+		<div class = "popupModern">
+			<div id = "imageMuseum3">
+				<div id='masked3'></div>
+			</div>
+			<div class = "closer">&#10005;</div>
+				<h2>Museum of Modern Art</h2>
+				<p>The Museum of Modern Art (MoMA) is an art museum located in Midtown Manhattan in New York City (on 53rd Street) between Fifth and Sixth Avenues. It has been important in developing and collecting modernist art, and is often identified as the most influential museum of modern art in the world. The museum's collection offers an overview of modern and contemporary art, including works of architecture and design, drawing, painting, sculpture, photography, prints, illustrated books and artist's books, film and electronic media.</p>
+				<p>The Library's holdings include approximately 300,000 books and exhibition catalogs, over 1,000 periodical titles, and over 40,000 files of ephemera about individual artists and groups. The archives holds primary source material related to the history of modern and contemporary art.</p>
+				<p>MoMA also houses a restaurant, the Modern, run by Alsace-born chef Gabriel Kreuther.</p>
+		</div>
+
+		<div class = "popupBrooklyn">
+			<div id = "imageMuseum4">
+				<div id='masked4'></div>
+			</div>
+			<div class = "closer">&#10005;</div>
+				<h2>Brooklyn Museum</h2>
+				<p>The Brooklyn Museum is an art museum located in the New York City borough of Brooklyn. At 560,000 square feet (52,000 m2), the museum is New York City's second largest in physical size and holds an art collection with roughly 1.5 million works.</p>
+				<p>Located near the Prospect Heights, Crown Heights, Flatbush, and Park Slope neighborhoods of Brooklyn and founded in 1895, the Beaux-Arts building, designed by McKim, Mead and White, was planned to be the largest art museum in the world.</p> 
+				<p>The museum initially struggled to maintain its building and collection, only to be revitalized in the late 20th-century, thanks to major renovations. Significant areas of the collection include antiquities, specifically their collection of Egyptian antiquities spanning over 3,000 years. African, Oceanic, and Japanese art make for notable antiquities collections as well. American art is heavily represented, starting at the Colonial period.</p> 
+		</div>
+
+		<div class = "popupMoving">
+			<div id = "imageMuseum5">
+				<div id='masked5'></div>
+			</div>
+			<div class = "closer">&#10005;</div>
+				<h2>Museum of the Moving Image</h2>
+				<p>The Museum of the Moving Image is a media museum located in Astoria, Queens in a former building of what is now the Kaufman Astoria Studios. The museum originally opened in 1988 as the American Museum of the Moving Image. The museum began a $67 million expansion in March 2008 and reopened in January 2011. The expansion was designed by architect Thomas Leeser.</p>
+				<p>The Museum of the Moving Image exists to expand public understanding and appreciation of the art, history, technique and technology of film, television, and digital media by collecting, preserving, and providing access to moving-image related artifacts via multimedia exhibitions and educational programming.</p> 
+		</div>
+
+		<div class = "popupFrick">
+			<div id = "imageMuseum6">
+				<div id='masked6'></div>
+			</div>
+			<div class = "closer">&#10005;</div>
+				<h2>Frick Collection</h2>
+				<p>The Frick Collection is an art museum located in the Henry Clay Frick House on the Upper East Side in New York City on Fifth Avenue between 70th and 71st Streets. It houses the collection of industrialist Henry Clay Frick.</p>
+				<p>The Frick is one of the pre-eminent small art museums in the United States, with a high-quality collection of old master paintings and fine furniture housed in six galleries within the former residence.</p> 
+				<p>Frick had intended the mansion to eventually become a museum. Many of the paintings are still arranged according to Frick's design. Besides its permanent collection, the Frick has always organized small, focused temporary exhibitions.</p>
+		</div>
+
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="js/script.js"></script> 
+<body>
+  <!-- // <script src="js/script.js"></script> -->
+</body>
+</html>
