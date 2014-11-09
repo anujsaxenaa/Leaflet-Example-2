@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-Leaflet-Example-2
-=================
-=======
 Best Museums to Visit in New York
 =================
 
