@@ -15,4 +15,3 @@ Best Museums to Visit in New York
 - Didn't want the background to darken when the popup appears. 
 
 **Link to the page:** http://anujsaxenaa.github.io/Leaflet-Example-2/
->>>>>>> gh-pages
