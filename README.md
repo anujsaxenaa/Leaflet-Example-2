@@ -9,7 +9,7 @@ Best Museums to Visit in New York
 
 ****
 
-**Changes that I wanted to make but could'nt manage in time**
+**Changes that I wanted to make but couldn't manage in time**
 
 - Applying scrolling functionality on the popups.
 - Didn't want the background to darken when the popup appears. 
